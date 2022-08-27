@@ -28,7 +28,7 @@ const getSingleProduct = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 const createProduct = (productObj) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/products.json`, productObj)
+  axios.post(`${dbUrl}/products.json`, productObj)
     .then((response) => {
       const payload = { firebaseKey: response.data.name };
       axios.patch(`${dbUrl}/products/${response.data.name}.json`, payload)
@@ -37,7 +37,7 @@ const createProduct = (productObj) => new Promise((resolve, reject) => {
 });
 
 const updateProduct = (productObj) => new Promise((resolve, reject) => {
-  axios.patch(`${dbUrl}/products/${productObj}.json`, productObj)
+  axios.patch(`${dbUrl}/products/${productObj.firebasesKey}.json`, productObj)
     .then(resolve)
     .catch(reject);
 });

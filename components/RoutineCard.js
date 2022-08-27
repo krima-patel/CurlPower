@@ -1,7 +1,7 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import Link from 'next/link';
 import { Card, Button } from 'react-bootstrap';
-import { PropTypes } from 'prop-types';
 import { deleteSingleRoutine } from '../api/routineData';
 
 export default function RoutineCard({
@@ -16,13 +16,12 @@ export default function RoutineCard({
     <>
       <Card style={{ width: '18rem' }}>
         <Card.Body>
-          <Card.Title>{routineObj.title}</Card.Title>
-          <Card.Subtitle>{routineObj.hairType}</Card.Subtitle>
-          <Card.Subtitle>{routineObj.date}</Card.Subtitle>
-          <Card.Subtitle>{routineObj.uid}</Card.Subtitle>
-          <Card.Text>{routineObj.description}</Card.Text>
+          <Card.Title>Routine: {routineObj.title}</Card.Title>
+          <Card.Subtitle>Hair Type: {routineObj.hairType}</Card.Subtitle>
+          <Card.Text>Description: {routineObj.description}</Card.Text>
+          <Card.Subtitle>Post Created: {new Date().toLocaleString()}{routineObj.date}</Card.Subtitle>
           <Link href={`/routine/${routineObj.firebaseKey}`} passHref>
-            <Button variant="primary" className="m-2">View</Button>
+            <Button variant="primary" className="m-2">More Info</Button>
           </Link>
           <Link href={`/routine/edit/${routineObj.firebaseKey}`} passHref>
             <Button variant="info">Update Routine</Button>
@@ -40,7 +39,6 @@ RoutineCard.propTypes = {
     title: PropTypes.string,
     hairType: PropTypes.string,
     date: PropTypes.string,
-    uid: PropTypes.string,
     description: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,

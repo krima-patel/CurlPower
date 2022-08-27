@@ -27,7 +27,7 @@ export default function NavBar() {
               <Nav.Link>Product Collection</Nav.Link>
             </Link>
             <Link passHref href="/product/new">
-              <Nav.Link>Create Product</Nav.Link>
+              <Nav.Link>Submit Product</Nav.Link>
             </Link>
           </Nav>
           <button type="button" className="btn btn-danger" onClick={signOut}>

@@ -64,7 +64,7 @@ function RoutineForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Routine</Button>
+      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Submit'} Routine</Button>
     </Form>
   );
 }
