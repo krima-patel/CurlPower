@@ -37,7 +37,7 @@ const createProduct = (productObj) => new Promise((resolve, reject) => {
 });
 
 const updateProduct = (productObj) => new Promise((resolve, reject) => {
-  axios.patch(`${dbUrl}/products/${productObj.firebasesKey}.json`, productObj)
+  axios.patch(`${dbUrl}/products/${productObj.firebaseKey}.json`, productObj)
     .then(resolve)
     .catch(reject);
 });
