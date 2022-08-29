@@ -7,7 +7,7 @@ export default function Products() {
   const [products, setProducts] = useState([]);
   const { user } = useAuth();
   const getAllTheProducts = () => {
-    getAllProducts(user.uid).then(setProducts);
+    getAllProducts(user).then(setProducts);
   };
 
   useEffect(() => {

@@ -4,8 +4,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Luckiest Guy';
+
 }
 
 a {
@@ -18,5 +18,32 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: white;
+}
+
+.welcome {
+  margin: 25px;
+}
+
+p {
+  margin: 25px;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+}
+
+.hair-type-title {
+  margin: 25px;
+}
+
+.card-groups {
+  margin: 25px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
 }
