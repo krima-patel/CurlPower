@@ -13,7 +13,7 @@ export default function ProductCard({ productObj, onUpdate }) {
 
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={productObj.image} alt={productObj.type} style={{ height: '400px' }} />
+      <Card.Img variant="top" src={productObj.image} alt={productObj.type} style={{ height: '400px' }} className="card-img-top" />
       <Card.Body>
         <Card.Title>{productObj.name}</Card.Title>
         <Card.Text>

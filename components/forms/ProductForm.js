@@ -49,7 +49,7 @@ export default function ProductForm({ obj }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Submit'} Product</h2>
+      <h2 className="text-black mt-5">{obj.firebaseKey ? 'Update' : 'Submit'} Product</h2>
       <FloatingLabel controlId="floatingInput1" label="Product Name" className="mb-3">
         <Form.Control type="text" placeholder="Enter Product Name" name="name" value={formInput.name} onChange={handleChange} required />
       </FloatingLabel>

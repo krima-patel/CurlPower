@@ -17,7 +17,7 @@ export default function ViewProduct() {
       <div className="d-flex flex-column">
         <Image src={productDetails.image} alt={productDetails.name} style={{ width: '300px' }} />
       </div>
-      <div className="text-white ms-5 details">
+      <div className="text-black ms-5 details">
         <h4>
           Product Name: {productDetails.name}
         </h4>
