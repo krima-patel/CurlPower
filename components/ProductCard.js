@@ -1,12 +1,18 @@
-import React from 'react';
+/* eslint-disable @next/next/no-img-element */
+import React, { useEffect, useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { deleteProduct } from '../api/productData';
-import { useAuth } from '../utils/context/authContext';
+import { getUser } from '../api/userData';
 
 export default function ProductCard({ productObj, onUpdate }) {
-  const { user } = useAuth();
+  const [userDetails, setUserDetails] = useState({});
+
+  useEffect(() => {
+    getUser(productObj.uid).then(setUserDetails);
+  }, [productObj]);
+
   const deleteThisProduct = () => {
     if (window.confirm(`Delete ${productObj.name}?`)) {
       deleteProduct(productObj.firebaseKey).then(() => onUpdate());
@@ -20,9 +26,9 @@ export default function ProductCard({ productObj, onUpdate }) {
         <Card.Title>{productObj.name}</Card.Title>
         <Card.Text>{productObj.purpose}</Card.Text>
         <Card.Subtitle>{productObj.date}</Card.Subtitle>
-        <h5>{user.displayName}</h5>
-        <h5>{user.photoURL}</h5>
-        {productObj.uid === user.uid ? (
+        <h5>{userDetails.userName}</h5>
+        <img src={userDetails.userImage} alt={userDetails.userName} />
+        {productObj.uid === userDetails.uid ? (
           <>
             <Link href={`/product/${productObj.firebaseKey}`} passHref>
               <Button variant="primary" className="m-2">
