@@ -5,16 +5,13 @@ import Link from 'next/link';
 import { Card, Button } from 'react-bootstrap';
 import { getUser } from '../api/userData';
 import { deleteSingleRoutine } from '../api/routineData';
-import { useAuth } from '../utils/context/authContext';
 
 export default function RoutineCard({ routineObj, onUpdate }) {
-  const { user } = useAuth();
   const [userDetails, setUserDetails] = useState({});
 
   useEffect(() => {
-    getUser(user.uid).then(setUserDetails);
-  }, [user]);
-  console.warn(userDetails);
+    getUser(routineObj.uid).then(setUserDetails);
+  }, [routineObj]);
 
   const deleteThisRoutine = () => {
     if (window.confirm(`Delete ${routineObj.title}?`)) {
@@ -71,8 +68,8 @@ RoutineCard.propTypes = {
     uid: PropTypes.string,
   }).isRequired,
   user: PropTypes.shape({
-    displayName: PropTypes.string,
-    photoURL: PropTypes.string,
+    userName: PropTypes.string,
+    userImage: PropTypes.string,
     uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
