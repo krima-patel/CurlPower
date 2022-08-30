@@ -1,12 +1,21 @@
-import React from 'react';
+/* eslint-disable @next/next/no-img-element */
+import React, { useEffect, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import Link from 'next/link';
 import { Card, Button } from 'react-bootstrap';
-import { useAuth } from '../utils/context/authContext';
+import { getUser } from '../api/userData';
 import { deleteSingleRoutine } from '../api/routineData';
+import { useAuth } from '../utils/context/authContext';
 
 export default function RoutineCard({ routineObj, onUpdate }) {
   const { user } = useAuth();
+  const [userDetails, setUserDetails] = useState({});
+
+  useEffect(() => {
+    getUser(user.uid).then(setUserDetails);
+  }, [user]);
+  console.warn(userDetails);
+
   const deleteThisRoutine = () => {
     if (window.confirm(`Delete ${routineObj.title}?`)) {
       deleteSingleRoutine(routineObj.firebaseKey).then(() => onUpdate());
@@ -23,9 +32,9 @@ export default function RoutineCard({ routineObj, onUpdate }) {
             <b>Post Created</b>: {new Date().toLocaleString()}
             {routineObj.date}
           </Card.Subtitle>
-          <h5>{user.displayName}</h5>
-          <h5>{user.photoUrl}</h5>
-          {routineObj.uid === user.uid ? (
+          <h5>{userDetails.userName}</h5>
+          <img src={userDetails.userImage} alt={userDetails.userName} />
+          {routineObj.uid === userDetails.uid ? (
             <>
               <Link href={`/routine/${routineObj.firebaseKey}`} passHref>
                 <Button variant="primary" className="m-2">
@@ -63,7 +72,7 @@ RoutineCard.propTypes = {
   }).isRequired,
   user: PropTypes.shape({
     displayName: PropTypes.string,
-    photoUrl: PropTypes.string,
+    photoURL: PropTypes.string,
     uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
