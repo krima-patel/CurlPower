@@ -25,13 +25,12 @@ export default function ViewProduct() {
           Product Type: {productDetails.type}
         </h4>
         <h5>
-          What is the purpose of this product? What is it helping to solve for you?
+          What is the purpose of this product? How is it solving your hair concerns?
         </h5>
         <p>{productDetails.purpose || ''}</p>
-        <hr />
-        <p>
-          {productDetails.priceRange}
-        </p>
+        <h4>
+          Price Range: {productDetails.priceRange}
+        </h4>
       </div>
     </div>
   );

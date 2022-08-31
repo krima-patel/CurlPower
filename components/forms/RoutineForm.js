@@ -34,7 +34,7 @@ function RoutineForm({ obj }) {
     if (obj.firebaseKey) {
       updateRoutine(formInput).then(() => router.push(`/routine/${obj.firebaseKey}`));
     } else {
-      const payload = { ...formInput, uid: user.uid };
+      const payload = { ...formInput, uid: user.uid, date: new Date().toDateString() };
       createRoutine(payload).then(() => {
         router.push('/routines');
       });

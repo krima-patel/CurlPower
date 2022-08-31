@@ -5,8 +5,10 @@ import Link from 'next/link';
 import { Card, Button } from 'react-bootstrap';
 import { getUser } from '../api/userData';
 import { deleteSingleRoutine } from '../api/routineData';
+import { useAuth } from '../utils/context/authContext';
 
 export default function RoutineCard({ routineObj, onUpdate }) {
+  const { user } = useAuth();
   const [userDetails, setUserDetails] = useState({});
 
   useEffect(() => {
@@ -26,12 +28,11 @@ export default function RoutineCard({ routineObj, onUpdate }) {
           <Card.Subtitle><b>Hair Type</b>: {routineObj.hairType}</Card.Subtitle>
           <Card.Text><b>Description</b>: {routineObj.description}</Card.Text>
           <Card.Subtitle>
-            <b>Post Created</b>: {new Date().toLocaleString()}
-            {routineObj.date}
+            <b>Post Created</b>: {routineObj.date}
           </Card.Subtitle>
           <h5>{userDetails.userName}</h5>
           <img src={userDetails.userImage} alt={userDetails.userName} />
-          {routineObj.uid === userDetails.uid ? (
+          {user.uid === routineObj.uid ? (
             <>
               <Link href={`/routine/${routineObj.firebaseKey}`} passHref>
                 <Button variant="primary" className="m-2">
