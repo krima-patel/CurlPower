@@ -5,8 +5,10 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { deleteProduct } from '../api/productData';
 import { getUser } from '../api/userData';
+import { useAuth } from '../utils/context/authContext';
 
 export default function ProductCard({ productObj, onUpdate }) {
+  const { user } = useAuth();
   const [userDetails, setUserDetails] = useState({});
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export default function ProductCard({ productObj, onUpdate }) {
         <Card.Subtitle>{productObj.date}</Card.Subtitle>
         <h5>{userDetails.userName}</h5>
         <img src={userDetails.userImage} alt={userDetails.userName} />
-        {productObj.uid === userDetails.uid ? (
+        {productObj.uid === user.uid ? (
           <>
             <Link href={`/product/${productObj.firebaseKey}`} passHref>
               <Button variant="primary" className="m-2">
