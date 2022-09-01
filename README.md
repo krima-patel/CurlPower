@@ -3,16 +3,16 @@
 
 ## Primary Features
 
-• Google authentication is required to log into the application
-• Upon authentication, user is automatically created and can navigate the pages
-• Landing page provides authenticated users descriptions about each hair type, helping to better understand their hair type in order to navigate the application
-• Authenticated users are able to create a hair routine
-• Authenticated users are able to submit a product(s) that accompanies a routine
-• Authenticated users are able to view all routines created by authenticated users
-• Authenticated users are able to edit and delete routines they have created, but can only view routines created by another user
-• Authenticated users are able to view all products submitted by authenticated users
-• Authenticated users are able to edit and delete products they have submitted, but can only view products created by another user
-• Users are able to sign out of the application via the "Sign Out" button on the nav bar
+- Google authentication is required to log into the application
+- Upon authentication, user is automatically created and can navigate the pages
+- Landing page provides authenticated users descriptions about each hair type, helping to better understand their hair type in order to navigate the application
+- Authenticated users are able to create a hair routine
+- Authenticated users are able to submit a product(s) that accompanies a routine
+- Authenticated users are able to view all routines created by authenticated users
+- Authenticated users are able to edit and delete routines they have created, but can only view routines created by another user
+- Authenticated users are able to view all products submitted by authenticated users
+- Authenticated users are able to edit and delete products they have submitted, but can only view products created by another user
+- Users are able to sign out of the application via the "Sign Out" button on the nav bar
 
 ## Target Audience and Purpose
 
@@ -22,9 +22,9 @@ Curl Power is an application designed for individuals with naturally curly hair,
 
 Join Curl Power here: https://curlpower-kp.netlify.app/
 
-• By clicking "Sign In" users will arrive to the landing page, the Hair Information page, allowing users to determine their hair type
-• The Routine Collection page allows authenticated users to view all routines created by other authenticated users
-• Create a Routine page is the routine form for authenticated users to fill out thorough, step-by-step hair routine
-• The Product Collection page allows authenticated users to view all products users have submitted
-• Products can also be viewed when viewing individual routines
-• Submit a Product page is the product form for authenticated users to fill out product details
+- By clicking "Sign In" users will arrive to the landing page, the Hair Information page, allowing users to determine their hair type
+- The Routine Collection page allows authenticated users to view all routines created by other authenticated users
+- Create a Routine page is the routine form for authenticated users to fill out thorough, step-by-step hair routine
+- The Product Collection page allows authenticated users to view all products users have submitted
+- Products can also be viewed when viewing individual routines
+- Submit a Product page is the product form for authenticated users to fill out product details
