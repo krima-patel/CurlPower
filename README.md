@@ -33,7 +33,6 @@ Join Curl Power here: https://curlpower-kp.netlify.app/
 
 Krima Patel
 - Krima's [LinkedIn](https://www.linkedin.com/in/krima-patel/)
-- Krima's [email](patel.krima@hotmail.com)
 
 ## Help
 
