@@ -28,3 +28,13 @@ Join Curl Power here: https://curlpower-kp.netlify.app/
 - The Product Collection page allows authenticated users to view all products users have submitted
 - Products can also be viewed when viewing individual routines
 - Submit a Product page is the product form for authenticated users to fill out product details
+
+## Contributions
+
+Krima Patel
+Krima's [LinkedIn](https://www.linkedin.com/in/krima-patel/)
+Krima's [email](patel.krima@hotmail.com)
+
+## Help
+
+Have questions or comments about Curl Power? Post them [here!](https://github.com/krima-patel/CurlPower/discussions)
