@@ -29,6 +29,10 @@ Join Curl Power here: https://curlpower-kp.netlify.app/
 - Products can also be viewed when viewing individual routines
 - Submit a Product page is the product form for authenticated users to fill out product details
 
+![Curl Power Sign In Page](https://user-images.githubusercontent.com/102260648/188251653-66e0ae52-30cb-442f-b391-76c3b6e352ff.png)
+![Curl Power Routine Form](https://user-images.githubusercontent.com/102260648/188251664-da428b12-9672-418a-90f6-da633c6bd9bf.png)
+![Curl Power Product Form](https://user-images.githubusercontent.com/102260648/188251672-fe3ae408-73c3-4734-9461-c686fecf0d0b.png)
+
 - [ERD for Curl Power](https://dbdiagram.io/d/62faca60c2d9cf52faafc3f9)
 - [Wireframe for Curl Power](https://whimsical.com/krima-s-curl-power-wireframe-4vvc3S18DXSHnT6xqqjzqT)
 - [Flow Chart for Curl Power](https://whimsical.com/krima-s-curl-power-flow-chart-66EnyeAQaWoEczn5zBzZDR)
