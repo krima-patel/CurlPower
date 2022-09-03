@@ -41,3 +41,7 @@ Krima Patel
 ## Help
 
 Have questions or comments about Curl Power? Post them in the Discussion Board [here!](https://github.com/krima-patel/CurlPower/discussions)
+
+## Loom Video
+
+[Curl Power Video](https://www.loom.com/share/3e31b13025684574940d1bff81362591)
