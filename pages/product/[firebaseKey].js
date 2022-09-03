@@ -15,20 +15,17 @@ export default function ViewProduct() {
   return (
     <div className="mt-5 d-flex flex-wrap">
       <div className="d-flex flex-column">
-        <Image src={productDetails.image} alt={productDetails.name} style={{ width: '300px' }} />
+        <Image src={productDetails.image} alt={productDetails.name} style={{ width: '300px', margin: '20px 0' }} />
       </div>
-      <div className="text-black ms-5 details">
-        <h4>
-          Product Name: {productDetails.name}
+      <div style={{ margin: '20px' }}>
+        <h4 style={{ color: '#DC6434' }}>
+          {productDetails.name}
         </h4>
-        <h4>
+        <h4 style={{ color: '#78816E' }}>
           Product Type: {productDetails.type}
         </h4>
-        <h5>
-          What is the purpose of this product? How is it solving your hair concerns?
-        </h5>
-        <p>{productDetails.purpose || ''}</p>
-        <h4>
+        <h5>What it does: {productDetails.purpose || ''}</h5>
+        <h4 style={{ color: '#78816E' }}>
           Price Range: {productDetails.priceRange}
         </h4>
       </div>

@@ -42,8 +42,9 @@ function RoutineForm({ obj }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <h2 className="text-black mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Routine</h2>
+    <Form style={{ color: '#DC6434' }} onSubmit={handleSubmit}>
+      <h2 className="text mt-5" style={{ color: '#DC6434' }}>{obj.firebaseKey ? 'Update' : 'Share'} Routine</h2>
+      <h6>Share your hair care routine here by filling out this form. This gives other users insight into your journey which may benefit them. Give a nice title, letting us know what this routine is specifically for. Identify your hair type, this helps tremendously! (if you are unsure, go to Hair Type Information) And please be thorough in your description! We want ALL the details.</h6>
       <FloatingLabel controlId="floatingInput1" label="Your Routine Title" className="mb-3">
         <Form.Control type="text" placeholder="Your Routine Title" name="title" value={formInput.title} onChange={handleChange} required />
       </FloatingLabel>
@@ -56,7 +57,7 @@ function RoutineForm({ obj }) {
       <FloatingLabel controlId="floatingTextarea2" label="Description of Your Routine">
         <Form.Control
           as="textarea"
-          placeholder="Description of Your Routine (be thorough and detailed!)"
+          placeholder="Description of Your Routine"
           style={{ height: '100px' }}
           name="description"
           value={formInput.description}

@@ -12,9 +12,9 @@ function Signin() {
       }}
     >
       <h1>Got Curls?</h1>
-      <p>Welcome to Curl Power, a community centered around those with curly hair, looking to either share advice or gain knowledge from others with similar hair types. This is where you will learn to take care of your hair and yourself and learn to fully embrace the beauty you were born with.</p>
-      <h4>Click the button below to login!</h4>
-      <button type="button" className="btn btn-info btn-lg copy-btn" onClick={signIn}>
+      <p>Welcome to <b>Curl Power</b>, a community dedicated to those with naturally curly hair, looking to either share or seek advice on various hair types. Share routines and products that have worked for you, because if you have curly hair, you know its difficult out here or if you are not sure where to begin or want to spice up your curls, then you&#39;ve come to the right place.</p>
+      <h3>Join <b>Curl Power</b> by clicking the button below!</h3>
+      <button type="button" className="sign-in btn btn-lg copy-btn" onClick={signIn}>
         Sign In
       </button>
     </div>

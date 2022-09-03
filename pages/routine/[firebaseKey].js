@@ -15,6 +15,9 @@ export default function ViewRoutine() {
 
   return (
     <div>
+      <h2 style={{ color: '#DC6434', margin: '20px' }}>{routineDetails.title}</h2>
+      <h5 style={{ color: '#78816E', margin: '20px' }}>Hair Type {routineDetails.hairType}</h5>
+      <h3 style={{ margin: '20px' }}>How it&#39;s done</h3>
       <p>
         {routineDetails.description}
       </p>

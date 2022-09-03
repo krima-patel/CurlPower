@@ -18,11 +18,16 @@ a {
 }
 
 body {
-  background-color: white;
+  background-color: #E2E3DD;
 }
 
 .welcome {
   margin: 25px;
+}
+
+.btn-sign-out {
+  background-color: #DC6434;
+  color: white;
 }
 
 p {
@@ -32,6 +37,11 @@ p {
 img {
   display: flex;
   justify-content: center;
+}
+
+.sign-in {
+  background-color: #DC6434;
+  color: white;
 }
 
 .hair-type-title {
@@ -46,4 +56,37 @@ img {
   width: 100%;
   height: 40vh;
   object-fit: cover;
+}
+
+h1, h2, b {
+  color: #DC6434;
+}
+
+.routine-title, .product-name {
+  color: #DC6434;
+  font-size: 25px;
+}
+
+.routine-hairType {
+  color: #78816E;
+  font-size: 20px;
+}
+
+.m-2 {
+  background-color: #DC6434;
+  border-color: #DC6434;
+}
+
+.routine-date, .product-date {
+  color: #78816E;
+  font-size: 17px;
+}
+
+.routine-cards, .product-cards {
+  padding: 10px 20px;
+  border: 6px solid;
+  background: transparent;
+  border-image: linear-gradient(45deg, #344729, #F8E9E9) 1;
+
+  border-radius: 5px;
 }

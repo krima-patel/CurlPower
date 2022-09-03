@@ -21,7 +21,7 @@ export default function NavBar() {
               <Nav.Link>Routine Collection</Nav.Link>
             </Link>
             <Link passHref href="/routine/new">
-              <Nav.Link>Create Routine</Nav.Link>
+              <Nav.Link>Share Routine</Nav.Link>
             </Link>
             <Link passHref href="/products">
               <Nav.Link>Product Collection</Nav.Link>
@@ -30,7 +30,7 @@ export default function NavBar() {
               <Nav.Link>Submit Product</Nav.Link>
             </Link>
           </Nav>
-          <button type="button" className="btn btn-danger" onClick={signOut}>
+          <button type="button" className="btn btn-sign-out" onClick={signOut}>
             Sign Out
           </button>
         </Navbar.Collapse>

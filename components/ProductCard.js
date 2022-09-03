@@ -22,13 +22,13 @@ export default function ProductCard({ productObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card className="product-cards" style={{ width: '18rem', margin: '15px' }}>
       <Card.Img variant="top" src={productObj.image} alt={productObj.type} style={{ height: '400px' }} className="card-img-top" />
       <Card.Body>
-        <Card.Title>{productObj.name}</Card.Title>
-        <Card.Text>{productObj.purpose}</Card.Text>
-        <Card.Subtitle>{productObj.date}</Card.Subtitle>
-        <h5>{userDetails.userName}</h5>
+        <Card.Title className="product-name">{productObj.name}</Card.Title>
+        <Card.Text className="product-purpose">{productObj.purpose}</Card.Text>
+        <Card.Subtitle className="product-date">Post Created: {productObj.date}</Card.Subtitle>
+        <h5 style={{ color: '#DC6434' }}>{userDetails.userName}</h5>
         <img src={userDetails.userImage} alt={userDetails.userName} />
         {productObj.uid === user.uid ? (
           <>
@@ -38,9 +38,9 @@ export default function ProductCard({ productObj, onUpdate }) {
               </Button>
             </Link>
             <Link href={`/product/edit/${productObj.firebaseKey}`} passHref>
-              <Button variant="info">Update Product</Button>
+              <Button className="m-2">Update Product</Button>
             </Link>
-            <Button variant="danger" onClick={deleteThisProduct} className="m-2">
+            <Button onClick={deleteThisProduct} className="m-2">
               Delete Product
             </Button>
           </>

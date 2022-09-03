@@ -22,35 +22,33 @@ export default function RoutineCard({ routineObj, onUpdate }) {
   };
   return (
     <>
-      <Card style={{ width: '20rem' }}>
-        <Card.Body>
-          <Card.Title><b>Routine</b>: {routineObj.title}</Card.Title>
-          <Card.Subtitle><b>Hair Type</b>: {routineObj.hairType}</Card.Subtitle>
-          <Card.Text><b>Description</b>: {routineObj.description}</Card.Text>
-          <Card.Subtitle>
-            <b>Post Created</b>: {routineObj.date}
+      <Card className="routine-cards" style={{ width: '20rem', margin: '15px' }}>
+        <Card.Body style={{ textAlign: 'left' }}>
+          <Card.Title className="routine-title">
+            <b>{routineObj.title}</b>
+          </Card.Title>
+          <Card.Subtitle className="routine-hairType">
+            <b>Hair Type {routineObj.hairType}</b>
           </Card.Subtitle>
-          <h5>{userDetails.userName}</h5>
+          <Card.Text className="routine-desc">{routineObj.description}</Card.Text>
+          <Card.Subtitle className="routine-date">Post Created: {routineObj.date}</Card.Subtitle>
+          <h5 style={{ color: '#DC6434' }}>{userDetails.userName}</h5>
           <img src={userDetails.userImage} alt={userDetails.userName} />
           {user.uid === routineObj.uid ? (
             <>
               <Link href={`/routine/${routineObj.firebaseKey}`} passHref>
-                <Button variant="primary" className="m-2">
-                  More Info
-                </Button>
+                <Button className="m-2">More Info</Button>
               </Link>
               <Link href={`/routine/edit/${routineObj.firebaseKey}`} passHref>
-                <Button variant="info">Update Routine</Button>
+                <Button className="m-2">Update Routine</Button>
               </Link>
-              <Button variant="danger" onClick={deleteThisRoutine} className="m-2">
+              <Button onClick={deleteThisRoutine} className="m-2">
                 Delete Routine
               </Button>
             </>
           ) : (
             <Link href={`/routine/${routineObj.firebaseKey}`} passHref>
-              <Button variant="primary" className="m-2">
-                More Info
-              </Button>
+              <Button className="m-2">More Info</Button>
             </Link>
           )}
         </Card.Body>
