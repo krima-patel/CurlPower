@@ -7,14 +7,14 @@ function Home() {
 
   return (
     <div>
-      <h1 className="welcome">Welcome to Curl Power, {user.displayName}!</h1>
+      <h1 className="welcome">Welcome to <b>Curl Power</b>, {user.displayName}!</h1>
       <p>
-        Thrilled to have you join <b>Curl Power</b>, a community where we share our curly hair care journey and help individuals figure out how to best take care of their curls so they can begin embracing their natural hair! This is all about learning the best way to take care of you, because you should love yourself how you are! It is recommeneded that if you are unsure of your hair type, you read the following information so you can better navigate through Curl Power&#39;s Routine and Product Collections.
+        Thank you for joining <b>Curl Power</b>, a community where we share our curly hair care journey and help individuals figure out how to best take care of their curls so they can begin embracing their natural hair! This is all about learning the best way to take care of you, because you should love yourself how you are! It is recommeneded that if you are unsure of your hair type, you read the following information so you are able to better navigate through Curl Power&#39;s Routine and Product Collections.
       </p>
       {/* <img width={500} style={{ margin: '0 auto' }} src="/./images/hairTypeChart.png" alt="Hair Type Chart" /> */}
 
       <h1 className="hair-type-title">How to Identify Your Hair Type</h1>
-      <p>This is where it all begins. Determining your hair type will make your life so much easier. This is the most essential step on the hair care journey,unlocking routines and products catered to your hair type. There are four hair type categories: straight, wavy, curly, and kinky or coily. For each category, there are three subcategories A, B, and C. The differences amongst the cateogries and subcategories are broken down below.</p>
+      <p>This is where it all begins. Determining your hair type will make your life so much easier. This is the most essential step to your hair care journey: unlocking routines and products catered to your hair type. There are four hair type categories: straight, wavy, curly, and kinky/coily. For each category, there are three subcategories A, B, and C. The differences amongst the cateogries and subcategories are explained below.</p>
       <h2 className="hair-type-title">Type 1 Hair: Straight</h2>
       <CardGroup className="card-groups">
         <Card>

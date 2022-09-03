@@ -40,7 +40,7 @@ export default function ProductForm({ obj }) {
     if (obj.firebaseKey) {
       updateProduct(formInput).then(() => router.push(`/product/${obj.firebaseKey}`));
     } else {
-      const payload = { ...formInput, uid: user.uid };
+      const payload = { ...formInput, uid: user.uid, date: new Date().toDateString() };
       createProduct(payload).then(() => {
         router.push('/products');
       });
@@ -48,22 +48,23 @@ export default function ProductForm({ obj }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <h2 className="text-black mt-5">{obj.firebaseKey ? 'Update' : 'Submit'} Product</h2>
-      <FloatingLabel controlId="floatingInput1" label="Product Name" className="mb-3">
+    <Form style={{ color: '#DC6434' }} onSubmit={handleSubmit}>
+      <h2 className="text mt-5">{obj.firebaseKey ? 'Update' : 'Submit'} Product</h2>
+      <h6>Have a product you want to give a shout-out to? Fill out this form with all the details and share with the community!</h6>
+      <FloatingLabel controlId="floatingInput1" label="What's the Product Name?" className="mb-3">
         <Form.Control type="text" placeholder="Enter Product Name" name="name" value={formInput.name} onChange={handleChange} required />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput1" label="Product Type" className="mb-3">
+      <FloatingLabel controlId="floatingInput1" label="What's the Product Type? (i.e. shampoo)" className="mb-3">
         <Form.Control type="text" placeholder="Enter Product Type" name="type" value={formInput.type} onChange={handleChange} required />
       </FloatingLabel>
       <FloatingLabel controlId="floatingInput2" label="Product Image" className="mb-3">
         <Form.Control type="url" placeholder="Enter the Product Image URL" name="image" value={formInput.image} onChange={handleChange} required />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput3" label="Product Purpose" className="mb-3">
-        <Form.Control type="text" placeholder="Enter your hair concern or purpose of this product" name="purpose" value={formInput.purpose} onChange={handleChange} required />
+      <FloatingLabel controlId="floatingInput3" label="What problem(s) does this product solve?" className="mb-3">
+        <Form.Control type="text" placeholder="Product Purpose" name="purpose" value={formInput.purpose} onChange={handleChange} required />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingSelect" label="Routine">
+      <FloatingLabel controlId="floatingSelect" label="Select the Routine this Product goes with">
         <Form.Select aria-label="Routine" name="routine_id" onChange={handleChange} className="mb-3" required>
           <option value="">Select Routine</option>
           {routines.map((routine) => (
@@ -78,7 +79,7 @@ export default function ProductForm({ obj }) {
           ))}
         </Form.Select>
       </FloatingLabel>
-      <FloatingLabel controlId="floatingSelect" label="Select Product Price Range">
+      <FloatingLabel controlId="floatingSelect" label="Is this product budget friendly or does it break the bank?">
         <Form.Select aria-label="Product Price Range" type="text" name="priceRange" value={formInput.priceRange} onChange={handleChange} className="mb-3" required>
           <option value="$">$</option>
           <option value="$$">$$</option>
