@@ -30,14 +30,14 @@ export default function RoutineCard({ routineObj, onUpdate }) {
           <Card.Subtitle className="routine-hairType">
             <b>Hair Type {routineObj.hairType}</b>
           </Card.Subtitle>
-          <Card.Text className="routine-desc">{routineObj.description}</Card.Text>
-          <Card.Subtitle className="routine-date">Post Created: {routineObj.date}</Card.Subtitle>
+          {/* <Card.Text className="routine-desc">{routineObj.description}</Card.Text> */}
+          <Card.Subtitle className="routine-date">Posted: {routineObj.date}</Card.Subtitle>
           <h5 style={{ color: '#DC6434' }}>{userDetails.userName}</h5>
-          <img src={userDetails.userImage} alt={userDetails.userName} />
+          <img className="user-image" src={userDetails.userImage} alt={userDetails.userName} />
           {user.uid === routineObj.uid ? (
             <>
               <Link href={`/routine/${routineObj.firebaseKey}`} passHref>
-                <Button className="m-2">More Info</Button>
+                <Button className="m-2">Learn More</Button>
               </Link>
               <Link href={`/routine/edit/${routineObj.firebaseKey}`} passHref>
                 <Button className="m-2">Update Routine</Button>
@@ -48,7 +48,7 @@ export default function RoutineCard({ routineObj, onUpdate }) {
             </>
           ) : (
             <Link href={`/routine/${routineObj.firebaseKey}`} passHref>
-              <Button className="m-2">More Info</Button>
+              <Button className="m-2">Learn More</Button>
             </Link>
           )}
         </Card.Body>
@@ -64,11 +64,6 @@ RoutineCard.propTypes = {
     hairType: PropTypes.string,
     date: PropTypes.string,
     description: PropTypes.string,
-    uid: PropTypes.string,
-  }).isRequired,
-  user: PropTypes.shape({
-    userName: PropTypes.string,
-    userImage: PropTypes.string,
     uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,

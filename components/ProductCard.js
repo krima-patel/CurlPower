@@ -27,9 +27,9 @@ export default function ProductCard({ productObj, onUpdate }) {
       <Card.Body>
         <Card.Title className="product-name">{productObj.name}</Card.Title>
         <Card.Text className="product-purpose">{productObj.purpose}</Card.Text>
-        <Card.Subtitle className="product-date">Post Created: {productObj.date}</Card.Subtitle>
+        <Card.Subtitle className="product-date">Posted: {productObj.date}</Card.Subtitle>
         <h5 style={{ color: '#DC6434' }}>{userDetails.userName}</h5>
-        <img src={userDetails.userImage} alt={userDetails.userName} />
+        <img className="user-image" src={userDetails.userImage} alt={userDetails.userName} />
         {productObj.uid === user.uid ? (
           <>
             <Link href={`/product/${productObj.firebaseKey}`} passHref>
@@ -64,11 +64,6 @@ ProductCard.propTypes = {
     purpose: PropTypes.string,
     date: PropTypes.string,
     firebaseKey: PropTypes.string,
-    uid: PropTypes.string,
-  }).isRequired,
-  user: PropTypes.shape({
-    displayName: PropTypes.string,
-    photoURL: PropTypes.string,
     uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
