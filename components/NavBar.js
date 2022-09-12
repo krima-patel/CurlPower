@@ -1,7 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
-import { Nav, Container, Navbar } from 'react-bootstrap';
+import {
+  Nav,
+  Container,
+  Navbar,
+  NavDropdown,
+} from 'react-bootstrap';
 import { signOut } from '../utils/auth';
 
 export default function NavBar() {
@@ -17,22 +22,39 @@ export default function NavBar() {
             <Link passHref href="/">
               <Nav.Link>Hair Type Information</Nav.Link>
             </Link>
+          </Nav>
+          <Nav className="me-auto">
             <Link passHref href="/routines">
               <Nav.Link>Routine Collection</Nav.Link>
             </Link>
-            <Link passHref href="/routine/new">
-              <Nav.Link>Share Routine</Nav.Link>
-            </Link>
+          </Nav>
+          <Nav className="me-auto">
             <Link passHref href="/products">
               <Nav.Link>Product Collection</Nav.Link>
             </Link>
-            <Link passHref href="/product/new">
-              <Nav.Link>Submit Product</Nav.Link>
-            </Link>
           </Nav>
-          <button type="button" className="btn btn-sign-out" onClick={signOut}>
-            Sign Out
-          </button>
+          <NavDropdown img="favicon.ico" title="Curl Power" className="nav-dropdown">
+            <NavDropdown.Item passHref href="/">
+              Hair Type Information
+            </NavDropdown.Item>
+            <NavDropdown.Item passHref href="/routines">
+              Routine Collection
+            </NavDropdown.Item>
+            <NavDropdown.Item passHref href="/products">
+              Product Collection
+            </NavDropdown.Item>
+            <NavDropdown.Item passHref href="/routine/new">
+              Share Routine
+            </NavDropdown.Item>
+            <NavDropdown.Item passHerf href="/product/new">
+              Submit Product
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <button type="button" className="btn btn-sign-out" onClick={signOut}>
+                Sign Out
+              </button>
+            </NavDropdown.Item>
+          </NavDropdown>
         </Navbar.Collapse>
       </Container>
     </Navbar>
