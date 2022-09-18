@@ -24,31 +24,30 @@ export default function RoutineCard({ routineObj, onUpdate }) {
     <>
       <Card className="routine-cards" style={{ width: '20rem', margin: '15px' }}>
         <Card.Body style={{ textAlign: 'left' }}>
-          <Card.Title className="routine-title">
-            <b>{routineObj.title}</b>
-          </Card.Title>
           <Card.Subtitle className="routine-hairType">
             <b>Hair Type {routineObj.hairType}</b>
           </Card.Subtitle>
-          {/* <Card.Text className="routine-desc">{routineObj.description}</Card.Text> */}
+          <Card.Title className="routine-title">
+            <b>{routineObj.title}</b>
+          </Card.Title>
           <Card.Subtitle className="routine-date">Posted: {routineObj.date}</Card.Subtitle>
           <h5 style={{ color: '#DC6434' }}>{userDetails.userName}</h5>
           <img className="user-image" src={userDetails.userImage} alt={userDetails.userName} />
           {user.uid === routineObj.uid ? (
             <>
               <Link href={`/routine/${routineObj.firebaseKey}`} passHref>
-                <Button className="m-2">Learn More</Button>
+                <Button className="routine-btns">Learn More</Button>
               </Link>
               <Link href={`/routine/edit/${routineObj.firebaseKey}`} passHref>
-                <Button className="m-2">Update Routine</Button>
+                <Button className="routine-btns">Update</Button>
               </Link>
-              <Button onClick={deleteThisRoutine} className="m-2">
-                Delete Routine
+              <Button onClick={deleteThisRoutine} className="routine-btns" id="delete-btn">
+                Delete
               </Button>
             </>
           ) : (
             <Link href={`/routine/${routineObj.firebaseKey}`} passHref>
-              <Button className="m-2">Learn More</Button>
+              <Button className="routine-btns">Learn More</Button>
             </Link>
           )}
         </Card.Body>

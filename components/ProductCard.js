@@ -33,20 +33,20 @@ export default function ProductCard({ productObj, onUpdate }) {
         {productObj.uid === user.uid ? (
           <>
             <Link href={`/product/${productObj.firebaseKey}`} passHref>
-              <Button variant="primary" className="m-2">
+              <Button className="product-btns">
                 More Info
               </Button>
             </Link>
             <Link href={`/product/edit/${productObj.firebaseKey}`} passHref>
-              <Button className="m-2">Update Product</Button>
+              <Button className="product-btns">Update</Button>
             </Link>
-            <Button onClick={deleteThisProduct} className="m-2">
-              Delete Product
+            <Button onClick={deleteThisProduct} className="product-btns" id="delete-product-btn">
+              Delete
             </Button>
           </>
         ) : (
           <Link href={`/product/${productObj.firebaseKey}`} passHref>
-            <Button variant="primary" className="m-2">
+            <Button className="product-btns">
               More Info
             </Button>
           </Link>
