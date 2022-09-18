@@ -23,6 +23,7 @@ body {
 
 .welcome {
   margin: 25px;
+  text-align: center;
 }
 
 .btn-sign-out {
@@ -32,10 +33,6 @@ body {
 
 p {
   margin: 25px;
-}
-
-userImage {
-  border-radius: 50%;
 }
 
 .hair-chart {
@@ -92,28 +89,64 @@ userImage {
   object-fit: cover;
 }
 
-h1, h2, b {
+h1, h2 {
   color: #DC6434;
-}
-
-.routine-title, .product-name {
-  color: #DC6434;
-  font-size: 25px;
 }
 
 .routine-hairType {
-  color: #78816E;
   font-size: 20px;
+  text-align: center;
+  color:#344729;
+  margin-top: 5%;
 }
 
-.m-2 {
+.routine-title, .product-name {
+  color:#DC6434;
+  font-size: 25px;
+  text-align: center;
+  margin: 5%;
+}
+
+.user-image {
+  border-radius: 100%;
+  width: 25%;
+}
+
+.collection {
+  text-align: center;
+}
+
+.routine-btns, .product-btns {
   background-color: #DC6434;
   border-color: #DC6434;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 10px;
 }
 
 .routine-date, .product-date {
-  color: #78816E;
+  color: #344729;
   font-size: 17px;
+}
+
+#delete-btn {
+  padding: 6px 50px 6px 50px;
+}
+
+#delete-product-btn {
+  padding: 6px 50px 6px 40px;
+}
+
+.routine-form-btn {
+  background-color: #DC6434;
+  border-color: #DC6434;
+  margin: 1% auto;
+}
+
+.product-form-btn {
+  background-color: #DC6434;
+  border-color: #DC6434;
 }
 
 .routine-cards, .product-cards {
@@ -122,4 +155,14 @@ h1, h2, b {
   background: transparent;
   border-image: linear-gradient(45deg, #344729, #F8E9E9) 1;
   border-radius: 5px;
+  width: 100%;
+}
+
+.product-purpose {
+  margin: 10% auto;
+}
+
+.productsContainer {
+  display: flex;
+  display: row;
 }

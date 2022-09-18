@@ -12,14 +12,18 @@ export default function Products() {
 
   useEffect(() => {
     getAllTheProducts();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   return (
-    <div className="d-flex flex-wrap">
-      {products.map((product) => (
-        <ProductCard key={product.firebaseKey} productObj={product} onUpdate={getAllTheProducts} />
-      ))}
-    </div>
+    <>
+      <h1 className="collection">Product Collection</h1>
+      <h5 className="collection">Browse through the Product Collection to learn about products that have proven to create and maintain curls for various hair types.</h5>
+      <div className="d-flex flex-wrap">
+        {products.map((product) => (
+          <ProductCard key={product.firebaseKey} productObj={product} onUpdate={getAllTheProducts} />
+        ))}
+      </div>
+    </>
   );
 }

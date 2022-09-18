@@ -44,7 +44,7 @@ function RoutineForm({ obj }) {
   return (
     <Form style={{ color: '#DC6434' }} onSubmit={handleSubmit}>
       <h2 className="text mt-5" style={{ color: '#DC6434' }}>{obj.firebaseKey ? 'Update' : 'Share'} Routine</h2>
-      <h6>Share your hair care routine here by filling out this form. This gives other users insight into your journey which may benefit them. Give a nice title, letting us know what this routine is specifically for. Identify your hair type, this helps tremendously! (if you are unsure, go to Hair Type Information) And please be thorough in your description! We want ALL the details.</h6>
+      <h6 style={{ color: '#344729' }}>Share your hair care routine here by filling out this form. This gives other users insight into your journey which may benefit them. Give a nice title, letting us know what this routine is specifically for. Identify your hair type, this helps tremendously! (if you are unsure, go to Hair Type Information) And please be thorough in your description! We want ALL the details.</h6>
       <FloatingLabel controlId="floatingInput1" label="Your Routine Title" className="mb-3">
         <Form.Control type="text" placeholder="Your Routine Title" name="title" value={formInput.title} onChange={handleChange} required />
       </FloatingLabel>
@@ -65,7 +65,7 @@ function RoutineForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Submit'} Routine</Button>
+      <Button type="submit" className="routine-form-btn">{obj.firebaseKey ? 'Update' : 'Submit'} Routine</Button>
     </Form>
   );
 }

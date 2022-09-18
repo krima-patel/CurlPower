@@ -50,7 +50,7 @@ export default function ProductForm({ obj }) {
   return (
     <Form style={{ color: '#DC6434' }} onSubmit={handleSubmit}>
       <h2 className="text mt-5">{obj.firebaseKey ? 'Update' : 'Submit'} Product</h2>
-      <h6>Have a product you want to give a shout-out to? Fill out this form with all the details and share with the community!</h6>
+      <h6 style={{ color: '#344729' }}>Have a product you want to give a shout-out to? Fill out this form with all the details and share with the community!</h6>
       <FloatingLabel controlId="floatingInput1" label="What's the Product Name?" className="mb-3">
         <Form.Control type="text" placeholder="Enter Product Name" name="name" value={formInput.name} onChange={handleChange} required />
       </FloatingLabel>
@@ -87,7 +87,7 @@ export default function ProductForm({ obj }) {
           <option value="$$$$">$$$$</option>
         </Form.Select>
       </FloatingLabel>
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Submit'} Product</Button>
+      <Button type="submit" className="product-form-btn">{obj.firebaseKey ? 'Update' : 'Submit'} Product</Button>
     </Form>
   );
 }

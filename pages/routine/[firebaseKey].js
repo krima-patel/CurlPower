@@ -16,12 +16,12 @@ export default function ViewRoutine() {
   return (
     <div>
       <h2 style={{ color: '#DC6434', margin: '20px' }}>{routineDetails.title}</h2>
-      <h5 style={{ color: '#78816E', margin: '20px' }}>Hair Type {routineDetails.hairType}</h5>
-      <h3 style={{ margin: '20px' }}>How it&#39;s done</h3>
+      <h5 style={{ color: '#344729', margin: '20px' }}>Hair Type {routineDetails.hairType}</h5>
+      <h3 style={{ color: '#344729', margin: '20px' }}>Here&#39;s how it&#39;s done</h3>
       <p>
         {routineDetails.description}
       </p>
-      <div className="container productsContainer">
+      <div className="productsContainer">
         {routineDetails.products?.map((product) => (
           <ProductCard
             key={product.firebaseKey}

@@ -21,11 +21,11 @@ export default function ViewProduct() {
         <h4 style={{ color: '#DC6434' }}>
           {productDetails.name}
         </h4>
-        <h4 style={{ color: '#78816E' }}>
+        <h4 style={{ color: '#344729' }}>
           Product Type: {productDetails.type}
         </h4>
-        <h5>What it does: {productDetails.purpose || ''}</h5>
-        <h4 style={{ color: '#78816E' }}>
+        <h5>Purpose: {productDetails.purpose || ''}</h5>
+        <h4 style={{ color: '#344729' }}>
           Price Range: {productDetails.priceRange}
         </h4>
       </div>
