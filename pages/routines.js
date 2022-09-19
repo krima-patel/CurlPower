@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getRoutines } from '../api/routineData';
 import RoutineCard from '../components/RoutineCard';
 
@@ -7,6 +7,7 @@ export default function Routines() {
   const getAllRoutines = () => {
     getRoutines().then(setRoutines);
   };
+
   useEffect(() => {
     getAllRoutines();
     // eslint-disable-next-line react-hooks/exhaustive-deps
