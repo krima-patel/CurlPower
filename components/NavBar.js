@@ -34,22 +34,32 @@ export default function NavBar() {
               <Nav.Link>Product Collection</Nav.Link>
             </Link>
           </Nav>
-          <NavDropdown title={<img className="cp-icon" src="favicon.ico" alt="curl power icon" style={{ width: '50%' }} />} className="nav-dropdown">
-            <NavDropdown.Item passHref href="/">
-              Hair Type Information
-            </NavDropdown.Item>
-            <NavDropdown.Item passHref href="/routines">
-              Routine Collection
-            </NavDropdown.Item>
-            <NavDropdown.Item passHref href="/products">
-              Product Collection
-            </NavDropdown.Item>
-            <NavDropdown.Item passHref href="/routine/new">
-              Share Routine
-            </NavDropdown.Item>
-            <NavDropdown.Item passHerf href="/product/new">
-              Submit Product
-            </NavDropdown.Item>
+          <NavDropdown title={<img className="cp-icon" src="/favicon.ico" alt="curl power icon" style={{ width: '50%' }} />} className="nav-dropdown">
+            <Link passHref href="/">
+              <NavDropdown.Item>
+                Hair Type Information
+              </NavDropdown.Item>
+            </Link>
+            <Link passHref href="/routines">
+              <NavDropdown.Item>
+                Routine Collection
+              </NavDropdown.Item>
+            </Link>
+            <Link passHref href="/products">
+              <NavDropdown.Item>
+                Product Collection
+              </NavDropdown.Item>
+            </Link>
+            <Link passHref href="/routine/new">
+              <NavDropdown.Item>
+                Share Routine
+              </NavDropdown.Item>
+            </Link>
+            <Link passHref href="/product/new">
+              <NavDropdown.Item>
+                Submit Product
+              </NavDropdown.Item>
+            </Link>
             <NavDropdown.Item>
               <button type="button" className="btn btn-sign-out" onClick={signOut}>
                 Sign Out
