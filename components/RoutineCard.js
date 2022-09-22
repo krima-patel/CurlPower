@@ -22,7 +22,7 @@ export default function RoutineCard({ routineObj, onUpdate }) {
   };
   return (
     <>
-      <Card className="routine-cards" style={{ width: '20rem', margin: '15px' }}>
+      <Card className="routine-cards" style={{ width: '18rem', margin: '15px' }}>
         <Card.Body style={{ textAlign: 'left' }}>
           <Card.Subtitle className="routine-hairType">
             <b>Hair Type {routineObj.hairType}</b>

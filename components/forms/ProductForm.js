@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Form, FloatingLabel, Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
-import { getRoutines } from '../../api/routineData';
+import { getUserRoutines } from '../../api/routineData';
 import { createProduct, updateProduct } from '../../api/productData';
 
 const initialState = {
@@ -17,13 +17,12 @@ const initialState = {
 
 export default function ProductForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
-  const [routines, setRoutines] = useState([]);
+  const [userRoutines, setUserRoutines] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
-    getRoutines(user.uid).then(setRoutines);
-
+    getUserRoutines(user.uid).then(setUserRoutines);
     if (obj.firebaseKey) setFormInput(obj);
   }, [obj, user]);
 
@@ -67,7 +66,7 @@ export default function ProductForm({ obj }) {
       <FloatingLabel controlId="floatingSelect" label="Select the Routine this Product goes with">
         <Form.Select aria-label="Routine" name="routine_id" onChange={handleChange} className="mb-3" required>
           <option value="">Select Routine</option>
-          {routines.map((routine) => (
+          {userRoutines.map((routine) => (
             <option
               key={routine.firebaseKey}
               value={routine.firebaseKey}
