@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import axios from 'axios';
 import { clientCredentials } from '../utils/client';
 
@@ -5,6 +6,18 @@ const dbUrl = clientCredentials.databaseURL;
 
 const getRoutines = () => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/routines.json`)
+    .then((response) => {
+      if (response.data) {
+        resolve(Object.values(response.data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch((error) => reject(error));
+});
+
+const getUserRoutines = (uid) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/routines.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
       if (response.data) {
         resolve(Object.values(response.data));
@@ -53,6 +66,7 @@ const getRoutineProducts = (firebaseKey) => new Promise((resolve, reject) => {
 
 export {
   getRoutines,
+  getUserRoutines,
   deleteSingleRoutine,
   createRoutine,
   updateRoutine,
