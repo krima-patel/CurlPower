@@ -18,7 +18,7 @@
 
 Curl Power is an application designed for individuals with naturally curly hair, either looking to give or seek advice when it comes to their hair care journey. There are a myriad of ways to take care of curly hair, but often times, essential details about maintainence and product guidelines are missing, especially when it comes down to each hair type. Giving curly haired guys and gals a space dedicated to embracing thier natural hair is important for self-love and self-care. Curl Power encourages healthy hair care by allowing users to spread the word on routines and products that have elevated their curly hair game. This is achieved by sharing detailed, step-by-step routines and the products used for each hair type.
 
-## Getting Started
+## Join the Curl Power Movement!
 
 Join Curl Power here: https://curlpower-kp.netlify.app/
 
@@ -36,6 +36,19 @@ Join Curl Power here: https://curlpower-kp.netlify.app/
 - [ERD for Curl Power](https://dbdiagram.io/d/62faca60c2d9cf52faafc3f9)
 - [Wireframe for Curl Power](https://whimsical.com/krima-s-curl-power-wireframe-4vvc3S18DXSHnT6xqqjzqT)
 - [Flow Chart for Curl Power](https://whimsical.com/krima-s-curl-power-flow-chart-66EnyeAQaWoEczn5zBzZDR)
+
+## Try out Curl Power on your Local Machine
+
+1. Begin by creating a Firebase project and setting up your own authentication. [Get to Firebase here](https://firebase.google.com/)
+2. Clone Curl Power to your local server: git@github.com:krima-patel/CurlPower.git
+3. Now that you've cloned the project, open it up and set up your .env file.
+4. Once you have your .env file, copy and paste the environmental variables from Firebase to your .env.
+5. Make sure you are in your root directory and from the terminal/command line, run: npm install or npm i
+6. Then run the command: npm run prepare
+7. Then run this command to start the application: npm run dev
+8. This will open up the localhost where you will be able to see Curl Power.
+9. If you want to stop the server press control+C. 
+10. That's it! Hope you have fun with the applcation and let me know what you think!
 
 ## Contributions
 
