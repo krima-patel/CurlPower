@@ -29,8 +29,7 @@ Join Curl Power here: https://curlpower-kp.netlify.app/
 - Products can also be viewed when viewing individual routines
 - Submit a Product page is the product form for authenticated users to fill out product details
 
-![Curl Power Sign In Page](<img width="802" alt="Curl Power Sign In" src="https://user-images.githubusercontent.com/102260648/194672125-bc870021-7d87-4d89-919c-63eef2834c55.png">
-)
+![Curl Power Sign In Page](https://user-images.githubusercontent.com/102260648/194672125-bc870021-7d87-4d89-919c-63eef2834c55.png)
 ![Curl Power Routine Form](https://user-images.githubusercontent.com/102260648/188251664-da428b12-9672-418a-90f6-da633c6bd9bf.png)
 ![Curl Power Product Form](https://user-images.githubusercontent.com/102260648/188251672-fe3ae408-73c3-4734-9461-c686fecf0d0b.png)
 
